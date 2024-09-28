@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel App</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Link Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav>
+        <!-- Logo Section -->
+        <div class="logo">Musafir.com</div>
+        <!-- Navbar Links -->
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Explore</a>
+            <a href="#">Like</a>
+        </div>
+        <!-- Navbar Icons (Home, Explore, Like) -->
+        <div class="nav-icons">
+            <i class="fas fa-home"></i>
+            <i class="fas fa-compass"></i>
+            <i class="fas fa-heart"></i>
+        </div>
+    </nav>
+
+    <!-- Dropdown Button -->
+    <button class="dropdown-btn" onclick="toggleSavedPlaces()">Show Saved Places</button>
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search destinations...">
+        <button onclick="searchDestinations()">Search</button>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        Tokyo - Explore the Land of the Rising Sun
+    </div>
+
+    <!-- Main Container for Destinations -->
+    <div class="main-container" id="destinationsContainer">
+        <!-- Dynamic Content for destinations will go here -->
+    </div>
+
+    <!-- Itinerary Section (Saved Places) -->
+    <div class="saved-container" id="savedPlacesContainer" style="display: none;">
+        <h2>Saved Places</h2>
+        <div id="savedDestinationsContainer">
+            <!-- Saved destinations will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <!-- Modal for Enlarged Image -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeModal()">✖</button>
+            <img id="modalImage" src="" alt="Enlarged Destination" style="width: 600px; height: 600px;">
+            <div id="modalDescription"></div>
+            <div class="stars">
+                <i class="star" onclick="rateStar(1)">&#9733;</i>
+                <i class="star" onclick="rateStar(2)">&#9733;</i>
+                <i class="star" onclick="rateStar(3)">&#9733;</i>
+                <i class="star" onclick="rateStar(4)">&#9733;</i>
+                <i class="star" onclick="rateStar(5)">&#9733;</i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-section">
+            <h3>About Us</h3>
+            <p>We are a travel discovery platform dedicated to helping you find the best destinations and experiences. Explore new locations, immerse yourself in cultures, and embark on unforgettable journeys.</p>
+        </div>
+        <div class="footer-section">
+            <h3>Categories</h3>
+            <ul>
+                <li><a href="#" id="latestDestinationsFooter">Latest</a></li>
+                <li><a href="#" id="beachDestinationsFooter">Beach Getaways</a></li>
+                <li><a href="#" id="adventureDestinationsFooter">Adventure Trips</a></li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Contact</h3>
+            <ul>
+                <li>Email: <a href="mailto:contact@travelapp.com">contact@travelapp.com</a></li>
+                <li>Phone: +123-456-7890</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-media-icons">
+                <a href="#" aria-label="Facebook">
+                    <img src="https://img.icons8.com/color/48/000000/facebook.png" alt="Facebook Icon" width="24" height="24">
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <img src="https://img.icons8.com/color/48/000000/twitter--v1.png" alt="Twitter Icon" width="24" height="24">
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <img src="https://img.icons8.com/color/48/000000/instagram-new--v1.png" alt="Instagram Icon" width="24" height="24">
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <img src="https://img.icons8.com/color/48/000000/youtube-play.png" alt="YouTube Icon" width="24" height="24">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- External JavaScript File -->
+    <script src="index.js"></script>
+</body>
+
+</html>
